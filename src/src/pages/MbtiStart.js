@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import mg from '../../src/enfj.png'
 
 
@@ -14,7 +14,6 @@ const TemplateBlock = styled.div`
     margin: 0 auto; // 페이지 중앙에 나타나도록 설정
     margin-top: 60px;
     border:  2px solid black;
-
 `;
 
 const HeadBlock = styled.div`
@@ -112,7 +111,9 @@ const TodoTemplate = () => {
                     <img className="size" src={process.env.PUBLIC_URL+"/images/intp.png"} alt="profile"></img>
                 </ImgBlock>
             </TemplateBlock>
-            <StartButton>시작하기</StartButton>
+            <Link to="/start">
+                <StartButton>시작하기</StartButton>
+            </Link>
         </>
     )
 }

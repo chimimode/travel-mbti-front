@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import MbtiStart from './pages/MbtiStart'
-import img from './travel.jpg'
+// import MbtiStart from './pages/MbtiStart';
+import Questioin from './pages/Question';
+import img from './travel.jpg';
+import { HashRouter, Route } from 'react-router-dom';
 
 const BackStyle =  styled.div`
   position: absolute;
@@ -16,7 +18,10 @@ const BackStyle =  styled.div`
 const App = () => {
   return (
       <BackStyle>
-        <MbtiStart/>
+        <HashRouter>
+          {/* <Route path="/" component={MbtiStart} /> */}
+          <Route path="/start" component={Questioin} />
+        </HashRouter>
       </BackStyle>
   );
 }
