@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-// import MbtiStart from './pages/MbtiStart';
+import MbtiStart from './pages/MbtiStart';
 import Questioin from './pages/Question';
 import img from './travel.jpg';
 import { HashRouter, Route } from 'react-router-dom';
@@ -19,7 +19,7 @@ const App = () => {
   return (
       <BackStyle>
         <HashRouter>
-          {/* <Route path="/" component={MbtiStart} /> */}
+          <Route exact path="/" component={MbtiStart} />
           <Route path="/start" component={Questioin} />
         </HashRouter>
       </BackStyle>
